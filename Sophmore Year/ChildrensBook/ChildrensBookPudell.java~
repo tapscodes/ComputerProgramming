@@ -1,0 +1,40 @@
+public class ChildrensBookPudell extends BookPudell
+{
+  private String illustrator;
+  private int minAge;
+  private int maxAge;
+  public static final String DEFAULT_TITLE="Picture Book";
+  public static final String DEFAULT_AUTHOR="No author";
+  public static final String  DEFAULT_ILLUSTRATOR="No illustrator";
+  public static final int DEFAULT_YEAR=2000;
+  public static final int DEFAULT_PAGES=10;
+  public static final int DEFAULT_MIN_AGE=0;
+  public static final int DEFAULT_MAX_AGE=0;
+  ChildrensBookPudell(String t, String a, String i, int y, int p, int
+min, int max)
+  {
+  }
+  ChildrensBookPudell(String i, int min, int max)
+  {
+  }
+  ChildrensBookPudell()
+  {
+  }
+  public String getIllustrator
+  {
+    return illustrator;
+  }
+  void setMinAge(int min)
+  {
+  }
+  void setMaxAge(int max)
+  {
+  }
+  String toString()
+  {
+    if (maxAge==0)
+      System.out.println(title+" ("+year+")\n Author: "+author+"\n Pg. "+ pagesRead+"/"+page+"\n Illustrator: " + illustrator+"\n Ages: " +minAge+ " and up");
+    else
+      System.out.println(DEFAULT_TITLE+" ("+DEFAULT_YEAR+")\n Author: "+DEFAULT_AUTHOR+"\n Pg. "+ DEFAULT_PAGE+"/"+DEFAULT_PAGE+"\n Illustrator: " + illustrator+"\n Ages: " +minAge+ " to " + maxAge);
+  }
+}

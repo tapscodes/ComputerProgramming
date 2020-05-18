@@ -1,0 +1,69 @@
+public class BookPudell{
+  //makes variables
+  private String title;
+  private String author;
+  private int year;
+  private int pages;
+  private int pagesRead;
+  public BookPudell(String t, String a, int y, int p)
+  {
+    //sets the values
+    title = t;
+    author = a;
+    year = y;
+    pages = p;
+    pagesRead = 0;
+  }//primary constructor
+  //sends the runners the values of an object
+  public String getTitle()
+  {
+    return title;
+  }//getTitle
+  public String getAuthor()
+  {
+    return author; 
+  }//getAuthor
+  public int getYear()
+  {
+    return year; 
+  }//getYear
+  public int getPages()
+  {
+    return pages;
+  }//getPages
+  public int getPagesRead()
+  {
+    return pagesRead;
+  }//getPagesRead
+  public void startOver()
+  {
+    //set pages read back to 0
+    pagesRead = 0; 
+  }//startOver
+  private int pagesLeft()
+  {
+    //returns the pages not read
+    return pages - pagesRead; 
+  }//pagesLeft
+  public String read(int p)
+  {
+    //adjusts pages read and returns book completion status
+   pagesRead += p;
+   if (pagesRead >= pages)
+   {
+     pagesRead = pages;
+     return "Book Complete";
+   }
+   else
+     return pagesLeft() + " pages remaining.";
+  }//read
+  public String read()
+  {
+    //sends the other read a value of 1
+    return read(1); 
+  }//read
+  public String toString()
+  {
+   return title + "(" + year + ")\n   Author:" + author + "\n   Pg. " + pagesRead + "/" + pages;
+  }//toString
+}

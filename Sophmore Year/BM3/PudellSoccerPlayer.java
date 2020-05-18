@@ -1,0 +1,117 @@
+/*
+ * PudellSoccerPlayer
+ * Writes basic statistics/averages about the goalie ontop of a normal soccer player's stats
+ * Author:Tristan P.-S.
+ */ 
+public class PudellSoccerPlayer
+{
+  //variable declaration
+  private int goals;//goals scored
+  private int assists;// assists on goals
+  private int gamesPlayed;//games played ever
+  private String playerName;//name of player
+  private int timePlayed;//how many minutes the player has palyed 
+  private boolean stillPlaying=false;//if they are still playing
+  private String teamName;// their team name
+  private double avgGoals;//average Goals per game
+  private double avgAssists;//average assists per game
+  private int fouls;//fouls overall
+  private int shots;//shots taken
+  private String position;//position the player plays
+  private boolean god=false;//if a player scores 100% of their shots they are considered a god tier player
+  private int playerID=0;//id of player from runner file
+  private String[] teamamtes={"Joe", "Quagmire", "Peter"};//teammates on a team
+  private String toStringStuff="";//stuff for toString
+public PudellSoccerPlayer(int g, int a, int gp, String n, int t, boolean st, String tn, int f, int s, String po)
+{
+  if (g<0||a<0||gp<0||t<0||f<0||s<0)
+  {
+    System.out.println("INVALID NUMBERS\n\n\n\n\n\n\n INVALID NUMBERS");
+  }//if statement (if a vlaue is -)
+  else
+  {
+  goals=g;
+  assists=a;
+  gamesPlayed=gp;
+  playerName=n;
+  timePlayed=t;
+  stillPlaying=st;
+  teamName=tn;
+  fouls=f;
+  shots=s;
+  position=po;
+  playerID=playerID+1;
+  avgGoals=g/gp;
+  avgAssists=a/gp;
+  }//values of variables if all of them are positive
+  }//normal constructor for PudellSocerPlayer
+public PudellSoccerPlayer()
+{
+  goals=0;
+  assists=0;
+  gamesPlayed=0;
+  playerName="Player";
+  timePlayed=0;
+  stillPlaying=false;
+  teamName="Default_Team";
+  fouls=0;
+  shots=0;
+  position="None";
+  avgGoals=0;
+  avgAssists=0;
+  playerID=playerID+1;
+  toStringStuff="\nPlayer: "+playerID+"\n Name: "+playerName+"\n Team: "+teamName+"\n Position: "+position+"\n Goals: "+goals+"\n Assists: "+assists+"\n Fouls: "+fouls+"\n Shots: "+shots+"\n Average Goals: "+avgGoals+"\n Average Assits: "+avgAssists+
+     "\n Games Played: "+gamesPlayed+"\n Time Played: "+timePlayed;
+}//default constructor for PudellSoccerPlayer
+public String getToStringStuff()
+{
+  return toStringStuff;
+}//getToStringStuff, allows the subclass to use the String"toStringStuff"
+public String getPosition()
+{
+  return position;
+}//getPosition,allows the subclass to use the String "position"
+public int getGamesPlayed()
+{
+  return gamesPlayed;
+}//getGamesPlayed, allows the subclass to use the int "gamesPlayed"
+boolean equals(PudellSoccerPlayer p)
+{
+  if (playerName=="Player")
+  {
+  }//if statement
+  else
+  {
+  if (shots==goals)
+    god=true;
+  else
+    god=false;
+  }//else statement
+  return false;
+}//.equals method, finds out if a player is a god
+public String toString()
+  {
+  if (god==true)
+  {
+     if (stillPlaying =true)
+     {
+    return toStringStuff;
+     }//if statement(StillPlaying)
+     else
+     {
+     return toStringStuff+"\n THIS PLAYER IS RETIRED AND A GOD"; 
+     }//else statement(still playing)
+}//if statement(god)
+     else
+     {
+       if (stillPlaying =true)
+       {
+        return toStringStuff;
+       }//stillplaying if statement
+       else
+       {
+       return toStringStuff+"\n THIS PLAYER IS RETIRED";
+       }//stillplaying else statement
+     }//else statement(god)
+  }//toString
+}//PudellSoccerPlayer class

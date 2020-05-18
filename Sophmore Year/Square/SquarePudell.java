@@ -1,0 +1,30 @@
+public class SquarePudell extends RectanglePudell
+{
+  //variable declaration
+  private static final int DEFAULT_SIDE=2;
+  //set the side to length+width because it is a square
+  public SquarePudell(int s)
+  {
+    super(s, s);
+  }
+  //sets to default length if none is found
+  public SquarePudell( )
+  {
+    this(DEFAULT_SIDE);
+  }
+  //gets the value set to side/length
+  public int getSide()
+  {
+    return getLength();
+  }
+  //checks if squares are =
+  public boolean equals(SquarePudell s)
+  {
+    return s.getSide() == this.getSide();
+  }
+  //pprints all the values for a square(using parts of rectangle)
+  public String toString()
+  {
+    return "Square " + getrectangleID() + ":\n side length: "+getLength();
+  }
+}

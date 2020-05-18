@@ -1,0 +1,8 @@
+public class PetP4_runner
+{
+  public static void main(String[] args)
+  {
+   // Can't run Pet P4 p=new PetP4("Buddy", false);, the class is abstract
+    DogP4 fido= new DogP4("Fido", false, false);
+  }//main method
+}//Pet runner class

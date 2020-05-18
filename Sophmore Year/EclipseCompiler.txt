@@ -1,0 +1,1 @@
+5 Mar 2018 13:40:19 GMT: Log 'EclipseCompiler.txt' opened: 5 Mar 2018 13:40:19 GMT with name C:\Users\Acer\Downloads\EclipseCompiler.txt

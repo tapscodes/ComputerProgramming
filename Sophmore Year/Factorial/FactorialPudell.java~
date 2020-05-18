@@ -1,0 +1,23 @@
+/*
+ * Author:Tristan P.-S.
+ * FactorialPudell class
+ */
+public class FactorialPudell
+{
+  public static int factorialFor(int n)
+  {
+    for (int i=0;i<n;i++)
+      n*=(n-1);
+    return n; 
+  }//FactorialFor(int)
+  public static int factorialRecursion(int n)
+  {
+    if (n>0)
+      n*=(n-1);
+      return n;
+  }//FactorialRecursion(int)
+  public static String binary(int num, int nDigits)
+  {
+    return "Yuh";
+  }//Binary(int, int)
+}//FactorialPudell

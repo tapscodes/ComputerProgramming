@@ -1,0 +1,52 @@
+public class RectanglePudell
+{
+  //variable declaration
+  private int length;
+  private int height;
+  private int DEFAULT_LENGTH=2;
+  private int DEFAULT_HEIGHT=2;
+  private static int rectangleCount;
+  private int rectangleID;
+  public RectanglePudell(int l, int h)
+  {
+    //if statement if l and h are invalid
+    if (l<=0 || h<=0)
+  {
+  }
+  else
+  {
+    length=l;
+    height=h;
+  }
+  }
+  public RectanglePudell()
+  {
+    length=DEFAULT_LENGTH;
+    height=DEFAULT_HEIGHT;
+    rectangleCount+= rectangleCount;
+    rectangleID=rectangleCount;
+  }
+  static int getRectangleCount()
+  {
+    return rectangleCount;
+  }
+  int area()
+  {
+    return length*height;
+  }
+  int perimeter()
+  {
+    return 2*length + 2*height;
+  }
+  boolean equals(RectanglePudell r)
+  {
+    if (length==r.length && height==r.height || length==r.height && height==r.length)
+    return true;
+    else
+      return false;
+  }
+  public String toString()
+  {
+    return "Rectangle "+ rectangleID+":/n Length: " +length+"/n Height: " +height;
+  }
+  }

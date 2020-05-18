@@ -1,0 +1,39 @@
+/*
+ * CatPudell class
+ * Author:Tristan P.-S.
+ * This class extends the Pet class for cats
+ */
+public class CatPudell extends Pet
+{
+  private boolean indoorCat=false;
+  private int numKittens;
+  private int DEFAULT_NUMKITTENS=1;
+  CatPudell(int k, boolean in,String n, boolean f)
+  {
+    super(n, f);
+    numKittens=k;
+    indoorCat=in;
+  }//primary constructor
+  CatPudell()
+  {
+    numKittens=DEFAULT_NUMKITTENS;
+  }//default constructor
+  void haveKittens(int n)
+  {
+    if (n<0)
+      numKittens=numKittens;
+    else
+      numKittens+=n;
+  }//haveKittens primary
+  void haveKittens()
+  {
+    haveKittens(4);
+  }//havekittens Default
+  String toString()
+  {
+    if (indoorCat==true)
+      return super.Pet+"Indoor Cat\n Number of Kittens: "+numKittens;
+      else
+      return super.Pet+"Outdoor Cat\n Number of Kittens: "+numKittens;
+  }//toString
+}//class declaration
